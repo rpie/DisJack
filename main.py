@@ -6,7 +6,7 @@ Log = f'{Fore.YELLOW}[LOG]{Fore.WHITE}'
 Syn = f'{Fore.RED}[SCN]{Fore.WHITE}'
 Con = f'{Fore.MAGENTA}[CON]{Fore.WHITE}'
 
-print(f"{Con} Connecting to wss://127.0.0.1:9223")
+print(f"{Con} Connecting to wss://127.0.0.1:9922")
 
 try:
     import PyChromeDevTools
@@ -15,7 +15,7 @@ except ImportError:
     print('Trying to install it for you')
     os.system('pip3 install PyChromeDevTools')
 
-chrome = PyChromeDevTools.ChromeInterface(port=9223)
+chrome = PyChromeDevTools.ChromeInterface(port=9922)
 
 userName = os.environ.get('USERNAME')
 print(f"Running on {userName}'s Computer")
